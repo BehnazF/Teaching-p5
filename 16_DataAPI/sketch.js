@@ -4,7 +4,7 @@ var weather;
 
 function setup() {
   createCanvas(200, 300);
-  loadJSON('http://api.openweathermap.org/data/2.5/weather?q=Los%20Angeles&appid=99e7669684bb8b978063d702c9c9e34f&units=metric', gotData)
+  loadJSON('pro.openweathermap.org/data/2.5/forecast/hourly?q={city name}&appid={API key}', gotData)
 }
 
 function gotData(data) {
