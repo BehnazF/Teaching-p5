@@ -3,10 +3,10 @@ this.pos= createVector(random(width), random(height));
 this.target= createVector(x,y);
 this.vel=  p5.Vector.random2D();
 this.acc= createVector();
-this.r= 5;
+this.r= 1;
 // this.val = slider.value();
-this.maxSpeed= 2;
-this.maxForce= 0.1;
+this.maxSpeed= 1;
+this.maxForce= 0.2;
 }
 
 particles.prototype.behaviors= function(){
@@ -44,8 +44,8 @@ particles.prototype.update= function(){
 }
 
 particles.prototype.show= function(){
-    stroke(0,255,0);
-    strokeWeight(10);
+    stroke(255,255,0);
+    strokeWeight(5);
     point(this.pos.x,this.pos.y);
 }
 

@@ -15,11 +15,12 @@ function setup() {
   // slider.style('width', '80px');
 
   textFont(myFont);
-  // textSize(300);
-   points = myFont.textToPoints('HELLO', windowWidth / 2-300, windowHeight / 2,300,{
-    sampleFactor: 0.5,
+
+points = myFont.textToPoints('REALIGNMENT', windowWidth / 2-300, windowHeight / 2,100,{
+    sampleFactor: 0.4,
     simplifyThreshold: 0
   });
+  // bounds = myFont.textBounds(' REALIGNMENT ', 0, 0, 10);
    for (let i = 0; i < points.length; i++) {
     var pt= points[i];
     var particle= new particles(pt.x,pt.y);
@@ -29,7 +30,14 @@ function setup() {
 }
 
 function draw() {
-  background(0, 255, 255, 255);
+  background(100);
+  fill(255,255,0,150);
+  textSize(10);
+  textAlign(CENTER, CENTER);
+  noStroke();
+text('Realignments: Computational Publics', windowWidth/2+200, windowHeight/2+20)
+  
+  
   for (let i = 0; i < points.length; i++) {
     particle_X[i].update();
     particle_X[i].show();
