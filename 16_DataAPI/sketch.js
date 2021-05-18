@@ -4,6 +4,7 @@ var weather;
 
 function setup() {
   createCanvas(200, 300);
+  //you will have to insert your API Key and city name yourself in the following line
   loadJSON('pro.openweathermap.org/data/2.5/forecast/hourly?q={city name}&appid={API key}', gotData)
 }
 
